@@ -1,0 +1,12 @@
+{
+  "ID": 2,
+  "name": "Suarez",
+  "description": "Funko de Jose Suarez",
+  "type": "Vynil Gold",
+  "gender": "Animación",
+  "franchise": "Game of Thrones",
+  "pieceNumber": 3,
+  "exclusive": false,
+  "specialFeatures": "Va mucho a la Palma",
+  "value": 5
+}

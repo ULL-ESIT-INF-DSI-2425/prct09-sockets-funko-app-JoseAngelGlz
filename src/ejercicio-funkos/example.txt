@@ -1,0 +1,16 @@
+// Añadir
+node dist/ejercicio-funkos/comands.js Añadir --u "user" --i 1 --n "Eduardo" --d "Funko de Eduardo Santander" --t "Pop!" --g "Deportes" --f "The Big Bang Theory" --p 1 --e true --s "Crea aplicaciones de Titsa" --v 50
+
+node dist/ejercicio-funkos/comands.js Añadir --u "user" --i 2 --n "Suarez" --d "Funko de Jose Suarez" --t "Vynil Gold" --g "Animación" --f "Game of Thrones" --p 3 --e false --s "Va mucho a la Palma" --v 5
+
+// Eliminar
+node dist/ejercicio-funkos/comands.js Eliminar --u "user" --i 1
+
+// Actualizar
+node dist/ejercicio-funkos/comands.js Actualizar --u "user" --i 1 --n "Eduardo" --d "Funko de Eduardo Santander" --t "Pop!" --g "Deportes" --f "The Big Bang Theory" --p 1 --e true --s "Es Peruano" --v 20
+
+// Imprimir todos
+node dist/ejercicio-funkos/comands.js Listar --u "user"
+
+// Imprimir un funko concreto
+node dist/ejercicio-funkos/comands.js ListarFunko --u "user" --i 1

@@ -1,0 +1,12 @@
+{
+  "ID": 1,
+  "name": "Eduardo",
+  "description": "Funko de Eduardo Santa modificado+nder",
+  "type": "Pop!",
+  "gender": "Deportes",
+  "franchise": "The Big Bang Theory",
+  "pieceNumber": 1,
+  "exclusive": true,
+  "specialFeatures": "Es Peruano",
+  "value": 20
+}
