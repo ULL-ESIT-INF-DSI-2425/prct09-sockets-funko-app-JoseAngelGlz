@@ -37,7 +37,7 @@ export class FunkoManager {
    * Añade un funko
    * @param funko - Funko a añadir
    */
-  public add(funko: Funko): void {
+  public add(funko: Funko): boolean {
     const fileName = path.join(this.path, `${funko.ID}.json`);
     fs.access(fileName, fs.constants.F_OK, (err) => {
       if (err) {
@@ -45,57 +45,61 @@ export class FunkoManager {
         fs.writeFile(fileName, JSON.stringify(funko, null, 2), (err) => {
           if (err) {
             console.error(chalk.red(`Error al añadir el funko ${funko.name}: ${err.message}`));
-            return;
+            return false;
           }
           console.log(chalk.green(`Funko ${funko.name} añadido correctamente`));
         });
       } else {
         // El archivo ya existe
         console.log(chalk.red(`El funko ${funko.name} ya existe para el usuario ${this.user}`));
+        return false;
       }
     });
+    return true;
   }
 
   /**
    * Elimina un funko
    * @param ID - Identificador del funko
    */
-  public remove(ID: number): void {
+  public remove(ID: number): boolean {
     const fileName = path.join(this.path, `${ID}.json`);
     fs.access(fileName, fs.constants.F_OK, (err) => {
       if (err) {
         console.log(chalk.red(`El funko con ID ${ID} no existe para el usuario ${this.user}`));
-        return;
+        return false;
       }
       fs.unlink(fileName, (err) => {
         if (err) {
           console.error(chalk.red(`Error al eliminar el funko con ID ${ID}: ${err.message}`));
-          return;
+          return false;
         }
         console.log(chalk.green(`Funko con ID ${ID} eliminado correctamente`));
       });
     });
+    return true;
   }
 
   /**
    * Actualiza un funko
    * @param funko - Funko a actualizar
    */
-  public update(funko: Funko): void {
+  public update(funko: Funko): boolean {
     const fileName = path.join(this.path, `${funko.ID}.json`);
     fs.access(fileName, fs.constants.F_OK, (err) => {
       if (err) {
         console.log(chalk.red(`El funko ${funko.name} no existe para el usuario ${this.user}`));
-        return;
+        return false;
       }
       fs.writeFile(fileName, JSON.stringify(funko, null, 2), (err) => {
         if (err) {
           console.error(chalk.red(`Error al actualizar el funko ${funko.name}: ${err.message}`));
-          return;
+          return false;
         }
         console.log(chalk.green(`Funko ${funko.name} actualizado correctamente`));
       });
     });
+    return true;
   }
 
   /**

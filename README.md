@@ -49,4 +49,5 @@ _Corre todos los test con coveralls_
 - **GitHub:** [https://github.com/JoseAngelGlez](https://github.com/JoseAngelGlez)
 - **LinkedIn:** [https://www.linkedin.com/in/joseangelglez/](https://www.linkedin.com/in/joseangelglez/)
 
+[![Tests](https://github.com/ULL-ESIT-INF-DSI-2425/prct09-sockets-funko-app-JoseAngelGlz/actions/workflows/ci.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2425/prct09-sockets-funko-app-JoseAngelGlz/actions/workflows/ci.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2425_prct09-sockets-funko-app-JoseAngelGlz&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ULL-ESIT-INF-DSI-2425_prct09-sockets-funko-app-JoseAngelGlz)
