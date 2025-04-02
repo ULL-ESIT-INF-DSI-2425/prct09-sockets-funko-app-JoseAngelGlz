@@ -28,11 +28,13 @@ const server = net.createServer((socket) => {
         console.log(chalk.green(`Comando ${wholeData} ejecutado correctamente!`));
         let output = data.toString();
         socket.write(output + '\n');
+        socket.end();
       })
 
       command_execution.on('error', (err) => {
         console.error(chalk.red(`Error al intentar ejecutar el comando: ${err.message}`));
         socket.write(`Error: No se pudo ejecutar el comando "${command}"\n`);
+        socket.end();
       });
     }
   })
